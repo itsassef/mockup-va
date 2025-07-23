@@ -23,6 +23,7 @@ const MainLayout = ({ children, currentView, setCurrentView }) => {
     { id: 'participants', label: 'Participants', icon: Users },
     { id: 'quiz', label: 'Quiz', icon: Award },
     { id: 'activities', label: 'Activities', icon: Target },
+    { id: 'grading', label: 'Grading', icon: Award },
     { id: 'analytics', label: 'Analytics', icon: BarChart3 },
     { id: 'settings', label: 'Settings', icon: Settings },
   ];

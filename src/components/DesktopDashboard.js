@@ -11,6 +11,7 @@ import ClientsScreen from './desktop/screens/ClientsScreen';
 import ParticipantsScreen from './desktop/screens/ParticipantsScreen';
 import QuizScreen from './desktop/screens/QuizScreen';
 import ActivitiesScreen from './desktop/screens/ActivitiesScreen';
+import GradingScreen from './desktop/screens/GradingScreen';
 import AnalyticsScreen from './desktop/screens/AnalyticsScreen';
 import SettingsScreen from './desktop/screens/SettingsScreen';
 
@@ -202,6 +203,8 @@ const DesktopDashboard = ({ currentView, setCurrentView }) => {
         return <QuizScreen />;
       case 'activities':
         return <ActivitiesScreen />;
+      case 'grading':
+        return <GradingScreen />;
       case 'analytics':
         return <AnalyticsScreen />;
       case 'settings':

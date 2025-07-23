@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   BookOpen, 
   Users, 
   Award, 
-  Target, 
-  BarChart3, 
-  Settings,
-  Plus,
-  Search,
-  Filter,
-  Eye,
-  Edit,
-  Trash2
+  Target
 } from 'lucide-react';
 
 // Import all the new screen components

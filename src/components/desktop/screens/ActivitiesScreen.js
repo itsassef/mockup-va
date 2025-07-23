@@ -11,8 +11,7 @@ import {
   Clock, 
   Star, 
   Edit, 
-  Save,
-  X
+  Save
 } from 'lucide-react';
 import ActivityCard from '../ActivityCard';
 

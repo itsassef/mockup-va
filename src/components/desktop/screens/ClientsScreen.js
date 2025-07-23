@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Search, Filter, Download, Eye, Edit, Trash2, Mail, Phone, Globe, Building } from 'lucide-react';
+import { Plus, Search, Filter, Download, Edit, Mail, Phone, Globe, Building } from 'lucide-react';
 import ClientCard from '../ClientCard';
 
 const ClientsScreen = () => {

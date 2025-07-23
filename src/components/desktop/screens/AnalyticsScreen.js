@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BarChart3, TrendingUp, Users, BookOpen, Award, Clock, CheckCircle, XCircle, AlertCircle, Download, Calendar, Target } from 'lucide-react';
+import { TrendingUp, Users, BookOpen, Award, Clock, CheckCircle, XCircle, AlertCircle, Download, Calendar } from 'lucide-react';
 
 const AnalyticsScreen = () => {
   const [selectedTimeframe, setSelectedTimeframe] = useState('month');

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Search, Filter, Download, User, BookOpen, Award, Clock, CheckCircle, Mail, Phone, Calendar } from 'lucide-react';
+import { Plus, Search, Download, BookOpen, Award, Clock, CheckCircle, Mail, Phone, Calendar } from 'lucide-react';
 import ParticipantCard from '../ParticipantCard';
 
 const ParticipantsScreen = () => {

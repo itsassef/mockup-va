@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import {
-  Search,
-  Filter,
   Heart,
   Star,
-  Play,
   Users,
   Home,
-  Folder,
   MessageCircle,
-  Settings,
   Flame,
   Network,
   CheckCircle,
@@ -19,22 +14,14 @@ import {
   Award,
   ClipboardList,
   FileText,
-  BarChart3,
-  Calendar,
   Bell,
   Download,
   Video,
   Trophy,
   Gamepad2,
-  Users2,
   TrendingUp,
   FileDown,
-  Eye,
-  Edit,
-  Plus,
-  Navigation,
-  MapPin,
-  Clock
+  Navigation
 } from 'lucide-react';
 
 const MobileApp = () => {
@@ -343,33 +330,7 @@ const MobileApp = () => {
     }
   };
 
-  const continueLearning = [
-    {
-      id: 1,
-      title: "UI/UX Mastery",
-      category: "UI/UX",
-      enrolled: "41k",
-      progress: 15,
-      image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=300&h=200&fit=crop&crop=center",
-      avatars: [
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face",
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face"
-      ]
-    },
-    {
-      id: 2,
-      title: "JavaScript Advanced",
-      category: "Programming",
-      enrolled: "28k",
-      progress: 45,
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300&h=200&fit=crop&crop=center",
-      avatars: [
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face",
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face"
-      ]
-    }
-  ];
+
 
   const teamActivities = [
     {
@@ -592,12 +553,12 @@ const MobileApp = () => {
       {
         id: 3,
         title: "Conflict Resolution",
-        questions: 6,
-        completed: 2,
-        description: "Evaluate conflict management and resolution skills"
-      }
-    ],
-    questions: [
+            questions: 6,
+    completed: 2,
+    description: "Evaluate conflict management and resolution skills"
+  }
+],
+assessmentQuestions: [
       {
         id: 1,
         section: "Communication Skills",
@@ -1238,29 +1199,29 @@ const MobileApp = () => {
       <div className="px-4 py-4">
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-4">
           <div className="text-center mb-4">
-            <div className="text-sm text-gray-500 mb-2">Question {assessmentDetailData.currentQuestion} of {assessmentDetailData.questions?.length || 0}</div>
+            <div className="text-sm text-gray-500 mb-2">Question {assessmentDetailData.currentQuestion} of {assessmentDetailData.assessmentQuestions?.length || 0}</div>
             <h3 className="text-lg font-bold text-gray-900 mb-4">
-              {assessmentDetailData.questions && assessmentDetailData.questions[assessmentDetailData.currentQuestion - 1] 
-                ? assessmentDetailData.questions[assessmentDetailData.currentQuestion - 1].question 
+              {assessmentDetailData.assessmentQuestions && assessmentDetailData.assessmentQuestions[assessmentDetailData.currentQuestion - 1] 
+                ? assessmentDetailData.assessmentQuestions[assessmentDetailData.currentQuestion - 1].question 
                 : 'Question not available'}
             </h3>
           </div>
           
           {/* Answer Options */}
-          {assessmentDetailData.questions && assessmentDetailData.questions[assessmentDetailData.currentQuestion - 1] && assessmentDetailData.questions[assessmentDetailData.currentQuestion - 1].type === 'multiple-choice' ? (
+          {assessmentDetailData.assessmentQuestions && assessmentDetailData.assessmentQuestions[assessmentDetailData.currentQuestion - 1] && assessmentDetailData.assessmentQuestions[assessmentDetailData.currentQuestion - 1].type === 'multiple-choice' ? (
             <div className="space-y-3">
-              {assessmentDetailData.questions[assessmentDetailData.currentQuestion - 1].options?.map((option, index) => (
+              {assessmentDetailData.assessmentQuestions[assessmentDetailData.currentQuestion - 1].options?.map((option, index) => (
                 <button
                   key={index}
                   className={`w-full p-4 rounded-lg border-2 text-left transition-all duration-200 ${
-                    assessmentDetailData.questions[assessmentDetailData.currentQuestion - 1]?.userAnswer === index
+                    assessmentDetailData.assessmentQuestions[assessmentDetailData.currentQuestion - 1]?.userAnswer === index
                       ? 'border-blue-500 bg-blue-50'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
                   <div className="flex items-center space-x-3">
                     <div className="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center">
-                      {assessmentDetailData.questions[assessmentDetailData.currentQuestion - 1]?.userAnswer === index && (
+                      {assessmentDetailData.assessmentQuestions[assessmentDetailData.currentQuestion - 1]?.userAnswer === index && (
                         <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                       )}
                     </div>
@@ -1275,10 +1236,10 @@ const MobileApp = () => {
                 placeholder="Type your answer here..."
                 className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none resize-none"
                 rows={4}
-                value={assessmentDetailData.questions[assessmentDetailData.currentQuestion - 1]?.userAnswer || ''}
+                value={assessmentDetailData.assessmentQuestions[assessmentDetailData.currentQuestion - 1]?.userAnswer || ''}
               />
               <div className="text-xs text-gray-500 text-right">
-                {assessmentDetailData.questions[assessmentDetailData.currentQuestion - 1]?.wordLimit || 100} words maximum
+                {assessmentDetailData.assessmentQuestions[assessmentDetailData.currentQuestion - 1]?.wordLimit || 100} words maximum
               </div>
             </div>
           )}
@@ -1289,7 +1250,7 @@ const MobileApp = () => {
               Previous
             </button>
             <button className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
-              {assessmentDetailData.currentQuestion === (assessmentDetailData.questions?.length || 0) ? 'Submit Assessment' : 'Next Question'}
+              {assessmentDetailData.currentQuestion === (assessmentDetailData.assessmentQuestions?.length || 0) ? 'Submit Assessment' : 'Next Question'}
             </button>
           </div>
         </div>

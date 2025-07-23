@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Search, Filter, Download, HelpCircle, Users, Clock, BarChart3, Edit, Play, Eye, Plus as PlusIcon, Trash2, Save, X } from 'lucide-react';
+import { Plus, Search, Filter, Download, HelpCircle, Clock, Edit, Play, Save } from 'lucide-react';
 import QuizCard from '../QuizCard';
 
 const QuizScreen = () => {

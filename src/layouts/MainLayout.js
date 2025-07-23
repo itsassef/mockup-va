@@ -1,9 +1,7 @@
 import React from 'react';
 import { 
   LayoutDashboard, 
-  Inbox, 
   BookOpen, 
-  ClipboardList, 
   Users, 
   Search, 
   Bell, 

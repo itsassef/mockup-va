@@ -21,7 +21,9 @@ import {
   Gamepad2,
   TrendingUp,
   FileDown,
-  Navigation
+  Navigation,
+  Search,
+  Filter
 } from 'lucide-react';
 
 const MobileApp = () => {

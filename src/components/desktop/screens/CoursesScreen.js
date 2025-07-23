@@ -336,12 +336,7 @@ const CoursesScreen = () => {
               
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <img 
-                    src={course.instructorAvatar} 
-                    alt={course.instructor}
-                    className="w-8 h-8 rounded-full"
-                  />
-                  <span className="text-sm text-gray-600">{course.instructor}</span>
+                  
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(course.category)}`}>
                     {categories.find(c => c.id === course.category)?.name}
                   </span>
@@ -349,10 +344,7 @@ const CoursesScreen = () => {
                     {difficulties.find(d => d.id === course.difficulty)?.name}
                   </span>
                 </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-gray-900">${course.price}</div>
-                  <div className="text-sm text-gray-500">USD</div>
-                </div>
+
               </div>
             </div>
           </div>

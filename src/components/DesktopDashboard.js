@@ -9,6 +9,7 @@ import {
 // Import all the new screen components
 import ClientsScreen from './desktop/screens/ClientsScreen';
 import ParticipantsScreen from './desktop/screens/ParticipantsScreen';
+import CoursesScreen from './desktop/screens/CoursesScreen';
 import QuizScreen from './desktop/screens/QuizScreen';
 import ActivitiesScreen from './desktop/screens/ActivitiesScreen';
 import GradingScreen from './desktop/screens/GradingScreen';
@@ -199,6 +200,8 @@ const DesktopDashboard = ({ currentView, setCurrentView }) => {
         return <ClientsScreen />;
       case 'participants':
         return <ParticipantsScreen />;
+      case 'courses':
+        return <CoursesScreen />;
       case 'quiz':
         return <QuizScreen />;
       case 'activities':

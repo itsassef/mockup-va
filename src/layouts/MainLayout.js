@@ -21,6 +21,7 @@ const MainLayout = ({ children, currentView, setCurrentView }) => {
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
     { id: 'clients', label: 'Clients', icon: Users },
     { id: 'participants', label: 'Participants', icon: Users },
+    { id: 'courses', label: 'Courses', icon: BookOpen },
     { id: 'quiz', label: 'Quiz', icon: Award },
     { id: 'activities', label: 'Activities', icon: Target },
     { id: 'grading', label: 'Grading', icon: Award },

@@ -23,7 +23,8 @@ import {
   FileDown,
   Navigation,
   Search,
-  Filter
+  Filter,
+  Plus
 } from 'lucide-react';
 
 const MobileApp = () => {

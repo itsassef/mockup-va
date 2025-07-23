@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Search, Filter, Download, HelpCircle, Clock, Edit, Play, Save } from 'lucide-react';
+import { Plus, Search, Filter, Download, HelpCircle, Clock, Edit, Play, Save, X } from 'lucide-react';
 import QuizCard from '../QuizCard';
 
 const QuizScreen = () => {
@@ -189,7 +189,7 @@ const QuizScreen = () => {
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">Questions</h3>
               <button className="px-3 py-1 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm">
-                <PlusIcon className="w-4 h-4 mr-1" />
+                <Plus className="w-4 h-4 mr-1" />
                 Add Question
               </button>
             </div>

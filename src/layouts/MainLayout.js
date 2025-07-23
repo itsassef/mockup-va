@@ -37,8 +37,8 @@ const MainLayout = ({ children, currentView, setCurrentView }) => {
 
   return (
     <div className="flex h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/40">
-      {/* Left Sidebar */}
-      <div className="w-64 bg-white/95 backdrop-blur-sm shadow-xl border-r border-gray-100">
+      {/* Left Sidebar - Fixed */}
+      <div className="w-64 bg-white/95 backdrop-blur-sm shadow-xl border-r border-gray-100 fixed left-0 top-0 h-full overflow-y-auto">
         <div className="p-6">
           {/* Logo */}
           <div className="flex items-center space-x-3 mb-8">
@@ -97,8 +97,8 @@ const MainLayout = ({ children, currentView, setCurrentView }) => {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+      {/* Main Content - With left margin to account for fixed sidebar */}
+      <div className="flex-1 flex flex-col ml-64">
         {/* Header */}
         <header className="bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-100 px-6 py-4">
           <div className="flex items-center justify-between">
@@ -161,7 +161,7 @@ const MainLayout = ({ children, currentView, setCurrentView }) => {
         </header>
 
         {/* Page Content */}
-        <main className="flex-1 overflow-auto">
+        <main className="flex-1 overflow-y-auto">
           {children}
         </main>
       </div>
